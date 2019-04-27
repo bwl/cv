@@ -1,0 +1,21 @@
+@font-face {
+  font-family: 'AvertaStd-Bold';
+  src: url('../fonts/AvertaStd-Bold.eot?#iefix') format('embedded-opentype'),  url('../fonts/AvertaStd-Bold.woff') format('woff'), url('../fonts/AvertaStd-Bold.ttf')  format('truetype'), url('../fonts/AvertaStd-Bold.svg#AvertaStd-Bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AvertaStd-Regular';
+  src: url('../fonts/AvertaStd-Regular.eot?#iefix') format('embedded-opentype'),  url('../fonts/AvertaStd-Regular.woff') format('woff'), url('../fonts/AvertaStd-Regular.ttf')  format('truetype'), url('../fonts/AvertaStd-Regular.svg#AvertaStd-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@mixin font-averta-bold {
+    font-family: "AvertaStd-Bold";
+}
+
+@mixin font-averta-regular {
+    font-family: "AvertaStd-Regular";
+}

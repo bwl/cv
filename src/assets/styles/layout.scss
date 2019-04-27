@@ -1,0 +1,13 @@
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: $white;
+}
+
+.content-wrapper {
+    background-color: $white;
+    margin: auto;
+    left: 0;
+    right: 0;
+    width: 100%;
+}
