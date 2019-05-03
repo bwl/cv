@@ -2,11 +2,12 @@ import React from 'react';
 import {
   Flex, Box, Image, Text, Heading,
 } from 'rebass';
-import ScrollManager from 'window-scroll-manager';
 import axios from 'axios';
 import NotFound from './NotFound';
 import FadeInDiv from '../components/FadeDiv';
 import Loading from '../components/Loading';
+
+import Player from '../components/Player';
 
 export default class Home extends React.Component {
   constructor(props) {
@@ -32,15 +33,12 @@ export default class Home extends React.Component {
     axios.get('https://mcapi.us/server/query?ip=cheeseburgervacation.com')
       .then((response) => {
       // handle success
-        console.log(response);
-
         this.setState({
           doc: response.data,
         });
       })
       .catch((error) => {
       // handle error
-        console.log(error);
       })
       .then(() => {
       // always executed
@@ -75,14 +73,17 @@ export default class Home extends React.Component {
               <Text fontSize={5} py={3}>Cheeseburger Vacation</Text>
               <Text fontSize={4} pb={3}>Minecraft Server Network</Text>
               <Text fontSize={2} pt={2}>{version}</Text>
-              <Text fontSize={1} pt={2}>{server}</Text>
+              <Text fontSize={1} pt={2} pb={4}>{server}</Text>
 
               {players && (
               <>
                 <Text fontSize={2} py={4}>{playersText}</Text>
-                {players.map(player => <Text fontSize={4} py={2}>{player}</Text>)}
+                {players.map(player => <Player username={player} />)}
               </>
               )}
+
+              <Player username='bwl' />
+
 
             </Box>
           </Flex>
