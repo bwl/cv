@@ -75,14 +75,25 @@ export default class Home extends React.Component {
               <Text fontSize={2} pt={2}>{version}</Text>
               <Text fontSize={1} pt={2} pb={4}>{server}</Text>
 
-              {players && (
-              <>
-                <Text fontSize={2} py={4}>{playersText}</Text>
-                {players.map(player => <Player username={player} />)}
-              </>
-              )}
 
-              <Player username='bwl' />
+              <Flex>
+                {players && (
+                <>
+                  <Text fontSize={2} py={4}>{playersText}</Text>
+                  {players.map(player => <Player username={player} />)}
+                </>
+                )}
+
+                {!players && (
+                < >
+                  <Player username='bwl' />
+                  {/* <Player username='subee' />
+                  <Player username='hukt0nf0nikz' />
+                  <Player username='jokester247' />
+                  <Player username='synthesists' /> */}
+                </ >
+                )}
+              </Flex>
 
 
             </Box>
