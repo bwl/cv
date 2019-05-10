@@ -76,11 +76,15 @@ export default class Home extends React.Component {
               <Text fontSize={1} pt={2} pb={4}>{server}</Text>
 
 
-              <Flex>
+              <Flex flexDirection='column'>
                 {players && (
                 <>
-                  <Text fontSize={2} py={4}>{playersText}</Text>
-                  {players.map(player => <Player username={player} />)}
+                  <Box>
+                    <Text fontSize={2} py={4}>{playersText}</Text>
+                  </Box>
+                  <Flex>
+                    {players.map(player => <Player username={player} />)}
+                  </Flex>
                 </>
                 )}
 
