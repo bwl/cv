@@ -50,9 +50,6 @@ export default class Home extends React.Component {
 
 
     if (doc) {
-      const { motd } = doc;
-
-
       if (!doc.online) {
         return 'Server offline at the moment.';
       }
@@ -64,44 +61,39 @@ export default class Home extends React.Component {
 
       return (
         <FadeInDiv>
-
-          {/* <Box className='map'><iframe src='http://cheeseburgervacation.com:8123/?worldname=world&mapname=surface&zoom=5&x=-16&y=64&z=-271' /></Box> */}
-
           <Flex className='font-averta-regular content-wrapper'>
-            <Box p={5}>
-
-              <Text fontSize={5} py={3}>Cheeseburger Vacation</Text>
-              <Text fontSize={4} pb={3}>Minecraft Server Network</Text>
-              <Text fontSize={2} pt={2}>{version}</Text>
-              <Text fontSize={1} pt={2} pb={4}>{server}</Text>
-
-
+            <Box pt={0} p={5}>
               <Flex flexDirection='column'>
+                <Text fontSize={5} py={3}>Cheeseburger Vacation</Text>
+                <Text fontSize={4} pb={3}>Minecraft Server Network</Text>
+                <Text fontSize={2} pt={2}>{version}</Text>
+                <Text fontSize={1} pt={2} pb={4}>{server}</Text>
                 {players && (
-                <>
-                  <Box>
-                    <Text fontSize={2} py={4}>{playersText}</Text>
-                  </Box>
-                  <Flex>
-                    {players.map(player => <Player username={player} />)}
-                  </Flex>
-                </>
+                  <>
+                    <Box>
+                      <Text fontSize={2} py={4}>{playersText}</Text>
+                    </Box>
+                    <Flex>
+                      {players.map(player => <Player username={player} />)}
+                    </Flex>
+                  </>
                 )}
 
                 {!players && (
-                < >
-                  <Player username='bwl' />
-                  {/* <Player username='subee' />
-                  <Player username='hukt0nf0nikz' />
-                  <Player username='jokester247' />
-                  <Player username='synthesists' /> */}
-                </ >
+                  < >
+                    <Player username='bwl' />
+                    {/* <Player username='subee' />
+                    <Player username='hukt0nf0nikz' />
+                    <Player username='jokester247' />
+                    <Player username='synthesists' /> */}
+                  </ >
                 )}
               </Flex>
-
-
             </Box>
           </Flex>
+          <Box className='map'>
+            <iframe title='map' src='http://cheeseburgervacation.com:8123/index.html?worldname=forest&mapname=surface&zoom=3&x=97&y=64&z=30' />
+          </Box>
         </FadeInDiv>
       );
     }
