@@ -7,6 +7,8 @@ import NotFound from './NotFound';
 import FadeInDiv from '../components/FadeDiv';
 import Loading from '../components/Loading';
 
+import discordIcon from '../assets/images/discord.svg';
+
 import Player from '../components/Player';
 
 export default class Home extends React.Component {
@@ -69,6 +71,10 @@ export default class Home extends React.Component {
                 <Text fontSize={4} pb={3}>Minecraft Server Network</Text>
                 <Text fontSize={2} pt={2}>{version}</Text>
                 <Text fontSize={1} pt={2} pb={4}>{server}</Text>
+                <Flex alignItems='center' py={1}>
+                  <img width='32' src={discordIcon} />
+                  <a style={{color: 'darkblue'}}href="https://discord.gg/fECUvJd">Join the discord</a>
+                </Flex>
                 {players && (
                   <>
                     <Box>
