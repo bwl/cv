@@ -80,8 +80,8 @@ export default class Home extends React.Component {
                     <Box>
                       <Text fontSize={2} py={4}>{playersText}</Text>
                     </Box>
-                    <Flex>
-                      {players.map(player => <Player username={player} />)}
+                    <Flex flexWrap="wrap">
+                      {players.map(player => <Player key={player} username={player} />)}
                     </Flex>
                   </>
                 )}

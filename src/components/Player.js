@@ -55,7 +55,7 @@ class Player extends React.Component {
     const src = `https://crafatar.com/renders/body/${uuid}?size=256&overlay`;
 
     return (
-      <Text pr={4} pb={4} fontSize={3} textAlign='center'>
+      <Text width={120} pb={4} fontSize={2} textAlign='center'>
         <img width={64} title='player' src={src} alt={name} />
         <br />
         {name}
