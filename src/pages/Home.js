@@ -107,17 +107,23 @@ export default class Home extends React.Component {
                 )}
 
                 {!players && (
-                  < >
-                    <Player username='bwl' />
-                    {/* <Player username='subee' />
-                    <Player username='hukt0nf0nikz' />
-                    <Player username='jokester247' />
-                    <Player username='synthesists' /> */}
-                  </ >
+                  <>
+                    <Box>
+                      <Text fontSize={2} py={4}>{playersText}</Text>
+                    </Box>
+                    <Flex flexWrap="wrap">
+                      <Player key='1' username='bwl' />
+                    </Flex>
+                  </>
                 )}
+      
+                <div class="klaviyo-form-WsCKjF"></div>
+
               </Flex>
             </Box>
           </Flex>
+
+
           <Box className='map'>
             <iframe title='map' src='http://cheeseburgervacation.com:8123/index.html?worldname=forest&mapname=surface&zoom=3&x=97&y=64&z=30' />
           </Box>
