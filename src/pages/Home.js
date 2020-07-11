@@ -11,6 +11,7 @@ import discordIcon from '../assets/images/discord.svg';
 
 import Player from '../components/Player';
 
+
 export default class Home extends React.Component {
   constructor(props) {
     super(props);
@@ -71,10 +72,29 @@ export default class Home extends React.Component {
                 <Text fontSize={4} pb={3}>Minecraft Server Network</Text>
                 <Text fontSize={2} pt={2}>{version}</Text>
                 <Text fontSize={1} pt={2} pb={4}>{server}</Text>
-                <Flex alignItems='center' py={1}>
+
+                <Flex alignItems='center' py={1} pb={5}>
                   <img width='32' src={discordIcon} />
                   <a style={{color: 'darkblue'}}href="https://discord.gg/fECUvJd">Join the discord</a>
                 </Flex>
+
+                <Text fontSize={2} pt={2}>
+                  Appreciate CV?
+                </Text>
+
+                <Text fontSize={2} pt={2}>
+                  <a
+                    style={{textDecoration:'underline'}}
+                    href='https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=JYD7A2XKACS5Y&source=url'
+                  >
+                   Donate!
+                  </a>
+                </Text>
+
+                <Text fontSize={1} pt={3} pb={5}>
+                  <p>All funds are used for server upkeep and patronage to appropriate plugin authors.</p>
+                </Text>
+
                 {players && (
                   <>
                     <Box>
