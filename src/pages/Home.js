@@ -75,7 +75,7 @@ export default class Home extends React.Component {
 
                 <Flex alignItems='center' py={1} pb={5}>
                   <img width='32' src={discordIcon} />
-                  <a style={{color: 'darkblue'}}href="https://discord.gg/fECUvJd">Join the discord</a>
+                  <a style={{color: 'darkblue'}}href="https://discord.gg/0rZllT5clXoOCf5G">Join the discord</a>
                 </Flex>
 
                 <Text fontSize={2} pt={2}>
