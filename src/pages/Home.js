@@ -125,7 +125,7 @@ export default class Home extends React.Component {
 
 
           <Box className='map'>
-            <iframe title='map' src='http://cheeseburgervacation.com/map' />
+            <iframe title='map' src='http://cheeseburgervacation.com/map/#/-116/64/-57/-2/forest%20-%20overworld/forest' />
             {/* <iframe title='map' src='http://cheeseburgervacation.com:8123/index.html?worldname=forest&mapname=surface&zoom=3&x=97&y=64&z=30' /> */}
           </Box>
         </FadeInDiv>
