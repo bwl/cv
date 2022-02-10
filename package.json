@@ -76,7 +76,7 @@
     "file-loader": "^6.0.0",
     "html-webpack-plugin": "^4.0.1",
     "husky": "^4.2.3",
-    "node-sass": "^4.11.0",
+    "node-sass": "^7.0.0",
     "postcss-loader": "^3.0.0",
     "redux-logger": "^3.0.6",
     "sass-lint": "^1.12.1",
