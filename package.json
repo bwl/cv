@@ -34,7 +34,7 @@
     "history": "^4.9.0",
     "moment": "^2.24.0",
     "prop-types": "^15.7.2",
-    "qs": "^6.7.0",
+    "qs": "^6.9.7",
     "query-string": "^6.4.2",
     "react": "^16.8.6",
     "react-animations": "^1.0.0",
